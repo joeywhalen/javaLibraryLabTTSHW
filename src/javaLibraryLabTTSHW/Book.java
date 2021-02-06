@@ -4,21 +4,32 @@ import java.util.ArrayList;
 
 public class Book {
 
-	String titleOne = ("The Da Vinci Code");
+	String title;// = ("The Da Vinci Code");
     boolean borrowed;
     boolean returned;
     public boolean addBook;
+    //public String bookTitle;
     
-    ArrayList<String> firstLibrary = new ArrayList<String>(3);
-	
+    ArrayList<String> firstLibrary = new ArrayList<String>();
+    	
     // Creates a new Book
     public Book(String bookTitle) {
         // Implement this method
-    	bookTitle = titleOne;
+    	title = "The Da Vinci Code";
+    	//bookTitle = title;
+    	firstLibrary.add(title);//firstLibrary.add(bookTitle);//firstLibrary.add("The Da Vinci Code");
+    	//return;
+    	//bookTitle = "The Da Vinci Code";//bookTitle = title;
     }
     
-    public void addBook() {
-    	addBook = firstLibrary.add("The Da Vinci Code");
+//    public void addBook() {
+//    	addBook = firstLibrary.add("The Da Vinci Code");
+//    }
+    
+    public void contents () {
+    for (int i = 0; i < firstLibrary.size(); i++) {
+    	System.out.println(firstLibrary.get(i));
+    }
     }
     
     // Marks the book as rented
@@ -35,15 +46,15 @@ public class Book {
    
     // Returns true if the book is rented, false otherwise
     public boolean isBorrowed() {
-    	boolean isBorrowed = firstLibrary.contains("The Da Vinci Code");
+    	boolean isBorrowed = firstLibrary.isEmpty();//boolean isBorrowed = firstLibrary.contains("The Da Vinci Code");
 			return true;
         // Implement this method
     }
    
     // Returns the title of the book
     public String getTitle() {
-    	String getTitle = titleOne;
-//    	getTitle = firstLibrary.get(0);
+    	//String getTitle = "";
+    	String getTitle = title;//String getTitle = bookTitle;//getTitle = "Test";//getTitle = bookTitle;//getTitle = firstLibrary.get(0);
 		return getTitle;
         // Implement this method
     }
@@ -57,5 +68,6 @@ public class Book {
         System.out.println("Borrowed? (should be true): " + example.isBorrowed());
         example.returned();
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
+        example.contents();
     }
 }
