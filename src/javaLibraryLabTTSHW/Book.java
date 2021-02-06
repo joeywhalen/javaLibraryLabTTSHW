@@ -1,9 +1,13 @@
 package javaLibraryLabTTSHW;
 
+import java.util.ArrayList;
+
 public class Book {
 
 	String title;
     boolean borrowed;
+    
+    ArrayList<String> firstLibrary = new ArrayList<String>();
 
     // Creates a new Book
     public Book(String bookTitle) {
@@ -35,7 +39,7 @@ public class Book {
         Book example = new Book("The Da Vinci Code");
         System.out.println("Title (should be The Da Vinci Code): " + example.getTitle());
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
-        example.rented();
+        example.borrowed();//example.rented();
         System.out.println("Borrowed? (should be true): " + example.isBorrowed());
         example.returned();
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
