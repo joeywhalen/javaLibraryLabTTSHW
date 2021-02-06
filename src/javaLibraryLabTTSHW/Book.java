@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Book {
 
-	String title;// = ("The Da Vinci Code");
+	String title;
     boolean borrowed;
     boolean returned;
-    public boolean addBook;
-    //public String bookTitle;
+    boolean addBook;
+    boolean isBorrowed;
     
     ArrayList<String> firstLibrary = new ArrayList<String>();
     	
@@ -16,16 +16,9 @@ public class Book {
     public Book(String bookTitle) {
         // Implement this method
     	title = "The Da Vinci Code";
-    	//bookTitle = title;
-    	firstLibrary.add(title);//firstLibrary.add(bookTitle);//firstLibrary.add("The Da Vinci Code");
-    	//return;
-    	//bookTitle = "The Da Vinci Code";//bookTitle = title;
+    	firstLibrary.add(title);
     }
-    
-//    public void addBook() {
-//    	addBook = firstLibrary.add("The Da Vinci Code");
-//    }
-    
+      
     public void contents () {
     for (int i = 0; i < firstLibrary.size(); i++) {
     	System.out.println(firstLibrary.get(i));
@@ -46,17 +39,16 @@ public class Book {
    
     // Returns true if the book is rented, false otherwise
     public boolean isBorrowed() {
-    	boolean isBorrowed = firstLibrary.isEmpty();//boolean isBorrowed = firstLibrary.contains("The Da Vinci Code");
+    	isBorrowed = firstLibrary.isEmpty();//boolean isBorrowed = firstLibrary.contains("The Da Vinci Code");
 			return true;
         // Implement this method
     }
    
     // Returns the title of the book
     public String getTitle() {
-    	//String getTitle = "";
-    	String getTitle = title;//String getTitle = bookTitle;//getTitle = "Test";//getTitle = bookTitle;//getTitle = firstLibrary.get(0);
-		return getTitle;
-        // Implement this method
+    	// Implement this method
+    	String getTitle = title;
+		return getTitle; 
     }
 
     public static void main(String[] arguments) {
