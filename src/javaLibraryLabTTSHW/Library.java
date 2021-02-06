@@ -1,7 +1,11 @@
 package javaLibraryLabTTSHW;
 
+import java.util.ArrayList;
+
 public class Library {
 	// Add the missing implementation to this class
+	ArrayList<String> firstLibrary = new ArrayList<String>();
+	ArrayList<String>secondLibrary = new ArrayList<String>();
 
     public static void main(String[] args) {
         // Create two libraries
