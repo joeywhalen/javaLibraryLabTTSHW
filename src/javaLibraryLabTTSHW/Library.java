@@ -22,6 +22,11 @@ public class Library {
 		// TODO Auto-generated method stub
 		printOpeningHours = System.out.printf("Libraries are open daily from 9am to 5pm.");//String printOpeningHours = "Libraries are open...";
 	}
+    
+    private void printAddress() {
+		// TODO Auto-generated method stub
+		
+	}
 
 	public static void main(String[] args) {
         // Create two libraries
@@ -38,9 +43,9 @@ public class Library {
         System.out.println("Library hours:");
         printOpeningHours();//System.out.println(firstLibrary.printOpeningHours());
         System.out.println();
-//
-//        System.out.println("Library addresses:");
-//        firstLibrary.printAddress();
+
+        System.out.println("Library addresses:");
+        firstLibrary.printAddress();
 //        secondLibrary.printAddress();
 //        System.out.println();
 //
@@ -68,6 +73,8 @@ public class Library {
 //        System.out.println("Books available in the first library:");
 //        firstLibrary.printAvailableBooks();
   }
+
+	
 
 		
 }
