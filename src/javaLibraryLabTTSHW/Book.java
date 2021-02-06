@@ -15,14 +15,13 @@ public class Book {
     public Book(String bookTitle) {
         // Implement this method
     	title = "The Da Vinci Code";
-    	//firstLibrary.add(title);
     }
       
-    public void contents () {
-    for (int i = 0; i < firstLibrary.size(); i++) {
-    	System.out.println(firstLibrary.get(i));
-    }
-    }
+//    public void contents () {
+//    for (int i = 0; i < firstLibrary.size(); i++) {
+//    	System.out.println(firstLibrary.get(i));
+//    }
+//    }
     
     // Marks the book as rented
     public void borrowed() {
@@ -38,11 +37,11 @@ public class Book {
    
     // Returns true if the book is rented, false otherwise
     public boolean isBorrowed() {
-    	isBorrowed = firstLibrary.isEmpty();//boolean isBorrowed = firstLibrary.contains("The Da Vinci Code");
+    	 // Implement this method
+    	isBorrowed = firstLibrary.isEmpty();
 			if (isBorrowed == true)
 				return true;
 			else
-        // Implement this method
 				return false;
     }
    
@@ -50,7 +49,7 @@ public class Book {
     public String getTitle() {
     	// Implement this method
     	String getTitle = title;
-    	firstLibrary.add(getTitle);//firstLibrary.add(title);//firstLibrary.add("Test1");
+    	firstLibrary.add(getTitle);
 		return getTitle; 
     }
 
@@ -63,6 +62,6 @@ public class Book {
         System.out.println("Borrowed? (should be true): " + example.isBorrowed());
         example.returned();
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
-        example.contents();
+        //example.contents();
     }
 }
