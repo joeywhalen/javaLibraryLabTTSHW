@@ -4,13 +4,19 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Library {
+	private static final String firstLibraryAddress = "10 Main St.";
+	private static final String secondLibraryAddress = "228 Liberty St.";
 	private static PrintStream printOpeningHours;
+	private Object printAddress;
+	
 	// Add the missing implementation to this class
 	ArrayList<String> firstLibrary = new ArrayList<String>();
-	ArrayList<String>secondLibrary = new ArrayList<String>();
-
+	ArrayList<String> secondLibrary = new ArrayList<String>();
+	
     public Library(String string) {
 		// TODO Auto-generated constructor stub
+//    	String firstLibraryAddress = "10 Main St.";
+//    	String secondLibraryAddress = "228 Liberty St.";
 	}
     
     private void addBook(Book book) {
@@ -25,7 +31,7 @@ public class Library {
     
     private void printAddress() {
 		// TODO Auto-generated method stub
-		
+		printAddress = System.out.printf(firstLibraryAddress);
 	}
 
 	public static void main(String[] args) {
@@ -46,10 +52,10 @@ public class Library {
 
         System.out.println("Library addresses:");
         firstLibrary.printAddress();
-//        secondLibrary.printAddress();
-//        System.out.println();
-//
-//        // Try to borrow The Lords of the Rings from both libraries
+        secondLibrary.printAddress();
+        System.out.println();
+
+        // Try to borrow The Lords of the Rings from both libraries
 //        System.out.println("Borrowing The Lord of the Rings:");
 //        firstLibrary.borrowBook("The Lord of the Rings");
 //        firstLibrary.borrowBook("The Lord of the Rings");
