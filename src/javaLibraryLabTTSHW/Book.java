@@ -7,7 +7,6 @@ public class Book {
 	String title;
     boolean borrowed;
     boolean returned;
-    boolean addBook;
     boolean isBorrowed;
     
     ArrayList<String> firstLibrary = new ArrayList<String>();
@@ -16,7 +15,7 @@ public class Book {
     public Book(String bookTitle) {
         // Implement this method
     	title = "The Da Vinci Code";
-    	firstLibrary.add(title);
+    	//firstLibrary.add(title);
     }
       
     public void contents () {
@@ -40,14 +39,18 @@ public class Book {
     // Returns true if the book is rented, false otherwise
     public boolean isBorrowed() {
     	isBorrowed = firstLibrary.isEmpty();//boolean isBorrowed = firstLibrary.contains("The Da Vinci Code");
-			return true;
+			if (isBorrowed == true)
+				return true;
+			else
         // Implement this method
+				return false;
     }
    
     // Returns the title of the book
     public String getTitle() {
     	// Implement this method
     	String getTitle = title;
+    	firstLibrary.add(getTitle);//firstLibrary.add(title);//firstLibrary.add("Test1");
 		return getTitle; 
     }
 
