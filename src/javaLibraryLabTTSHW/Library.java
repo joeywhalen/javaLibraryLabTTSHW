@@ -4,23 +4,19 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Library {
-	//String firstLibraryAddress = "10 Main St.";//private static final String firstLibraryAddress = "10 Main St.";
-	//String secondLibraryAddress = "228 Liberty St.";//private static final String secondLibraryAddress = "228 Liberty St.";
+	// Add the missing implementation to this class
 	private static PrintStream printOpeningHours;
 	private Object printAddress;
 	String libraryAddress;
-	String anotherLibraryAddress;//private String addr;
+	String anotherLibraryAddress;
 	
-	// Add the missing implementation to this class
 	ArrayList<String> libraryMain = new ArrayList<String>();//ArrayList<String> firstLibrary = new ArrayList<String>();
 	ArrayList<String> libraryLiberty = new ArrayList<String>();//ArrayList<String> secondLibrary = new ArrayList<String>();
-	//private Object address;
 	
 	
-    public Library(String anotherLibraryAddress) {//public Library(String string) {
+    public Library(String anotherLibraryAddress) {
 		// TODO Auto-generated constructor stub
-    	this.libraryAddress = anotherLibraryAddress;//String firstLibraryAddress = "10 Main St.";
-    	//String secondLibraryAddress = "228 Liberty St.";
+    	this.libraryAddress = anotherLibraryAddress;
 	}
     
     private void addBook(Book book) {
@@ -30,12 +26,12 @@ public class Library {
     
     private static void printOpeningHours() {
 		// TODO Auto-generated method stub
-		printOpeningHours = System.out.printf("Libraries are open daily from 9am to 5pm.");//String printOpeningHours = "Libraries are open...";
+		printOpeningHours = System.out.printf("Libraries are open daily from 9am to 5pm.");
 	}
     
     private void printAddress() {
 		// TODO Auto-generated method stub
-    	System.out.println(this.libraryAddress);//System.out.printf(firstLibraryAddress, secondLibraryAddress);//printAddress = System.out.printf("%s", firstLibraryAddress);//printAddress = System.out.printf(secondLibraryAddress, firstLibraryAddress);
+    	System.out.println(this.libraryAddress);
 	}
 
 	public static void main(String[] args) {
@@ -51,7 +47,7 @@ public class Library {
 
         // Print opening hours and the addresses
         System.out.println("Library hours:");
-        printOpeningHours();//System.out.println(firstLibrary.printOpeningHours());
+        printOpeningHours();
         System.out.println();
 
         System.out.println("Library addresses:");
