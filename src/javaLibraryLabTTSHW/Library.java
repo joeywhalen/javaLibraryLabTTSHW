@@ -9,20 +9,28 @@ public class Library {
 	private Object printAddress;
 	String libraryAddress;
 	String anotherLibraryAddress;
+	String book;
+	private Object addBook;
 	
-	ArrayList<String> libraryMain = new ArrayList<String>();//ArrayList<String> firstLibrary = new ArrayList<String>();
-	ArrayList<String> libraryLiberty = new ArrayList<String>();//ArrayList<String> secondLibrary = new ArrayList<String>();
+	ArrayList<Book> libraryMain; //= new ArrayList<String>();//ArrayList<String> firstLibrary = new ArrayList<String>();
+	//ArrayList<String> libraryLiberty = new ArrayList<String>();//ArrayList<String> secondLibrary = new ArrayList<String>();  
 	
-	
-    public Library(String anotherLibraryAddress) {
+	public Library(String anotherLibraryAddress) {
 		// TODO Auto-generated constructor stub
+    	this.libraryMain = new ArrayList<Book>();
     	this.libraryAddress = anotherLibraryAddress;
 	}
-    
-    private void addBook(Book book) {
+	
+    public boolean addBook(Book book) {
 		// TODO Auto-generated method stub
-		
+    	return this.libraryMain.add(book);//addBook = libraryMain.add("The Da Vinci Code");//addBook = libraryMain.add(this.book);
 	}
+    
+    public void contents () {
+      for (int i = 0; i < libraryMain.size(); i++) {
+      	System.out.println(libraryMain.get(i));
+      }
+      }
     
     private static void printOpeningHours() {
 		// TODO Auto-generated method stub
@@ -44,6 +52,8 @@ public class Library {
         firstLibrary.addBook(new Book("Le Petit Prince"));
         firstLibrary.addBook(new Book("A Tale of Two Cities"));
         firstLibrary.addBook(new Book("The Lord of the Rings"));
+        
+        firstLibrary.contents();// remove this
 
         // Print opening hours and the addresses
         System.out.println("Library hours:");
