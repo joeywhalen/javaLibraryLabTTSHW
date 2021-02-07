@@ -1,56 +1,40 @@
 package javaLibraryLabTTSHW;
 
-import java.util.ArrayList;
-
 public class Book {
 
 	String title;
     boolean borrowed;
     boolean returned;
     boolean isBorrowed;
-    
-    ArrayList<String> firstLibrary = new ArrayList<String>();
     	
     // Creates a new Book
     public Book(String bookTitle) {
         // Implement this method
-    	title = "The Da Vinci Code";
+    	this.title = bookTitle;
     }
-      
-//    public void contents () {
-//    for (int i = 0; i < firstLibrary.size(); i++) {
-//    	System.out.println(firstLibrary.get(i));
-//    }
-//    }
     
     // Marks the book as rented
     public void borrowed() {
         // Implement this method
-    	borrowed = firstLibrary.remove("The Da Vinci Code");
+    	this.borrowed = true;
     }
    
     // Marks the book as not rented
     public void returned() {
         // Implement this method
-    	returned = firstLibrary.add("The Da Vinci Code");
+    	this.borrowed = false;
     }
    
     // Returns true if the book is rented, false otherwise
     public boolean isBorrowed() {
     	 // Implement this method
-    	isBorrowed = firstLibrary.isEmpty();
-			if (isBorrowed == true)
-				return true;
-			else
-				return false;
+    	return this.borrowed;
     }
    
     // Returns the title of the book
     public String getTitle() {
     	// Implement this method
-    	String getTitle = title;
-    	firstLibrary.add(getTitle);
-		return getTitle; 
+		return this.title; 
     }
 
     public static void main(String[] arguments) {
@@ -62,6 +46,5 @@ public class Book {
         System.out.println("Borrowed? (should be true): " + example.isBorrowed());
         example.returned();
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
-        //example.contents();
     }
 }

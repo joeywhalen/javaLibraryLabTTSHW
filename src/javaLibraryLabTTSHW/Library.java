@@ -1,17 +1,17 @@
 package javaLibraryLabTTSHW;
 
-import java.io.PrintStream;
+//import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Library {
 	// Add the missing implementation to this class
-	private static PrintStream printOpeningHours;
+	//private static PrintStream printOpeningHours;
 	private Object printAddress;
+	private Object addBook;
 	String libraryAddress;
 	String anotherLibraryAddress;
 	String book;
-	private Object addBook;
-	
+		
 	ArrayList<Book> libraryMain; //= new ArrayList<String>();//ArrayList<String> firstLibrary = new ArrayList<String>();
 	//ArrayList<String> libraryLiberty = new ArrayList<String>();//ArrayList<String> secondLibrary = new ArrayList<String>();  
 	
@@ -34,12 +34,17 @@ public class Library {
     
     private static void printOpeningHours() {
 		// TODO Auto-generated method stub
-		printOpeningHours = System.out.printf("Libraries are open daily from 9am to 5pm.");
+    	System.out.printf("Libraries are open daily from 9am to 5pm.");//printOpeningHours = System.out.printf("Libraries are open daily from 9am to 5pm.");
 	}
     
     private void printAddress() {
 		// TODO Auto-generated method stub
     	System.out.println(this.libraryAddress);
+	}
+    
+    private void borrowBook(String bookTitle) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public static void main(String[] args) {
@@ -66,12 +71,12 @@ public class Library {
         System.out.println();
 
         // Try to borrow The Lords of the Rings from both libraries
-//        System.out.println("Borrowing The Lord of the Rings:");
-//        firstLibrary.borrowBook("The Lord of the Rings");
-//        firstLibrary.borrowBook("The Lord of the Rings");
-//        secondLibrary.borrowBook("The Lord of the Rings");
-//        System.out.println();
-//
+        System.out.println("Borrowing The Lord of the Rings:");
+        firstLibrary.borrowBook("The Lord of the Rings");
+        firstLibrary.borrowBook("The Lord of the Rings");
+        secondLibrary.borrowBook("The Lord of the Rings");
+        System.out.println();
+
 //        // Print the titles of all available books from both libraries
 //        System.out.println("Books available in the first library:");
 //        firstLibrary.printAvailableBooks();
@@ -89,6 +94,8 @@ public class Library {
 //        System.out.println("Books available in the first library:");
 //        firstLibrary.printAvailableBooks();
   }
+
+	
 
 	
 
