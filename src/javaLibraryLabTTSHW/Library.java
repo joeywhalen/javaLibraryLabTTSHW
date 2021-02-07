@@ -4,19 +4,23 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Library {
-	private static final String firstLibraryAddress = "10 Main St.";
-	private static final String secondLibraryAddress = "228 Liberty St.";
+	//String firstLibraryAddress = "10 Main St.";//private static final String firstLibraryAddress = "10 Main St.";
+	//String secondLibraryAddress = "228 Liberty St.";//private static final String secondLibraryAddress = "228 Liberty St.";
 	private static PrintStream printOpeningHours;
 	private Object printAddress;
+	String address;
+	String addr;//private String addr;
 	
 	// Add the missing implementation to this class
-	ArrayList<String> firstLibrary = new ArrayList<String>();
-	ArrayList<String> secondLibrary = new ArrayList<String>();
+	ArrayList<String> libraryMain = new ArrayList<String>();//ArrayList<String> firstLibrary = new ArrayList<String>();
+	ArrayList<String> libraryLiberty = new ArrayList<String>();//ArrayList<String> secondLibrary = new ArrayList<String>();
+	//private Object address;
 	
-    public Library(String string) {
+	
+    public Library(String addr) {//public Library(String string) {
 		// TODO Auto-generated constructor stub
-//    	String firstLibraryAddress = "10 Main St.";
-//    	String secondLibraryAddress = "228 Liberty St.";
+    	this.address = addr;//String firstLibraryAddress = "10 Main St.";
+    	//String secondLibraryAddress = "228 Liberty St.";
 	}
     
     private void addBook(Book book) {
@@ -31,7 +35,7 @@ public class Library {
     
     private void printAddress() {
 		// TODO Auto-generated method stub
-		printAddress = System.out.printf(firstLibraryAddress);
+    	System.out.println(this.address);//System.out.printf(firstLibraryAddress, secondLibraryAddress);//printAddress = System.out.printf("%s", firstLibraryAddress);//printAddress = System.out.printf(secondLibraryAddress, firstLibraryAddress);
 	}
 
 	public static void main(String[] args) {
