@@ -44,7 +44,24 @@ public class Library {
     
     private void borrowBook(String bookTitle) {
 		// TODO Auto-generated method stub
-		
+		boolean found = false;
+		boolean success = false;
+		for (Book book : this.libraryMain) {
+			if (book.title.equalsIgnoreCase(bookTitle)) {
+				found = true;
+				if (!book.isBorrowed()) {
+					book.borrowed();
+					System.out.println("You successfully borrowed " + bookTitle);
+					success = true;
+					break;
+				}
+			}
+		}
+		if (!found) {
+			System.out.println("Sorry, this book is not inj our catalog.");
+		} else if (!success) {
+			System.out.println("Sorry, this book is already borrowed.");
+		}
 	}
 
 	public static void main(String[] args) {
@@ -58,7 +75,7 @@ public class Library {
         firstLibrary.addBook(new Book("A Tale of Two Cities"));
         firstLibrary.addBook(new Book("The Lord of the Rings"));
         
-        firstLibrary.contents();// remove this
+        //firstLibrary.contents();// remove this
 
         // Print opening hours and the addresses
         System.out.println("Library hours:");
