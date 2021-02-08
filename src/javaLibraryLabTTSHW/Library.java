@@ -57,14 +57,27 @@ public class Library {
 				}
 			}
 		}
-		if (!inCatalog) {
-			System.out.println("Sorry, this book is not inj our catalog.");
-		} else if (!claimed) {
-			System.out.println("Sorry, this book is already borrowed.");
+			if (!inCatalog) {
+				System.out.println("Sorry, this book is not in our catalog.");
+		} 	else if (!claimed) {
+				System.out.println("Sorry, this book is already borrowed.");
 		}
 	}
     
-    private void printAvailableBooks() {
+    public void printAvailableBooks() {
+		// TODO Auto-generated method stub
+		boolean unclaimed = false;
+		for (Book book : this.libraryMain) {
+			if (!book.isBorrowed()) {
+				unclaimed = true;
+				System.out.println(book.title);
+			}
+		}
+			if (!unclaimed)
+				System.out.println("No book in catalog");
+	}
+    
+    public void returnBook(String string) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -108,20 +121,12 @@ public class Library {
         System.out.println();
 
         // Return The Lords of the Rings to the first library
-//        System.out.println("Returning The Lord of the Rings:");
-//        firstLibrary.returnBook("The Lord of the Rings");
-//        System.out.println();
-//
-//        // Print the titles of available from the first library
-//        System.out.println("Books available in the first library:");
-//        firstLibrary.printAvailableBooks();
-  }
+        System.out.println("Returning The Lord of the Rings:");
+        firstLibrary.returnBook("The Lord of the Rings");
+        System.out.println();
 
-	
-
-	
-
-	
-
-		
+        // Print the titles of available from the first library
+        System.out.println("Books available in the first library:");
+        firstLibrary.printAvailableBooks();
+  }		
 }
