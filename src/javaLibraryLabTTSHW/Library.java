@@ -74,12 +74,29 @@ public class Library {
 			}
 		}
 			if (!unclaimed)
-				System.out.println("No book in catalog");
+				System.out.println("No books in catalog");
 	}
     
-    public void returnBook(String string) {
+    public void returnBook(String bookTitle) {
 		// TODO Auto-generated method stub
-		
+    	boolean inCatalog = false;
+		boolean claimed = false;
+		for (Book book : this.libraryMain) {
+			if (book.title.equalsIgnoreCase(bookTitle)) {
+				inCatalog = true;
+				if (book.isBorrowed()) {
+					book.returned();
+					System.out.println("You successfully returned " + bookTitle);
+					claimed = true;
+					break;
+				}
+			}
+		}
+			if (!inCatalog) {
+				System.out.println("Sorry, this book is not in our catalog.");
+		} 	else if (!claimed) {
+				System.out.println("Sorry, this book is already borrowed.");
+		}
 	}
 
 	public static void main(String[] args) {
