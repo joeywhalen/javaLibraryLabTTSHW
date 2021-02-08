@@ -1,19 +1,13 @@
 package javaLibraryLabTTSHW;
 
-//import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Library {
 	// Add the missing implementation to this class
-	//private static PrintStream printOpeningHours;
-	private Object printAddress;
-	private Object addBook;
 	String libraryAddress;
 	String anotherLibraryAddress;
 	String book;
-		
-	ArrayList<Book> libraryMain; //= new ArrayList<String>();//ArrayList<String> firstLibrary = new ArrayList<String>();
-	//ArrayList<String> libraryLiberty = new ArrayList<String>();//ArrayList<String> secondLibrary = new ArrayList<String>();  
+	ArrayList<Book> libraryMain;
 	
 	public Library(String anotherLibraryAddress) {
 		// TODO Auto-generated constructor stub
@@ -23,18 +17,12 @@ public class Library {
 	
     public boolean addBook(Book book) {
 		// TODO Auto-generated method stub
-    	return this.libraryMain.add(book);//addBook = libraryMain.add("The Da Vinci Code");//addBook = libraryMain.add(this.book);
+    	return this.libraryMain.add(book);
 	}
-    
-    public void contents () {
-      for (int i = 0; i < libraryMain.size(); i++) {
-      	System.out.println(libraryMain.get(i));
-      }
-      }
     
     private static void printOpeningHours() {
 		// TODO Auto-generated method stub
-    	System.out.printf("Libraries are open daily from 9am to 5pm.");//printOpeningHours = System.out.printf("Libraries are open daily from 9am to 5pm.");
+    	System.out.printf("Libraries are open daily from 9am to 5pm.");
 	}
     
     private void printAddress() {
@@ -109,8 +97,6 @@ public class Library {
         firstLibrary.addBook(new Book("Le Petit Prince"));
         firstLibrary.addBook(new Book("A Tale of Two Cities"));
         firstLibrary.addBook(new Book("The Lord of the Rings"));
-        
-        //firstLibrary.contents();// remove this
 
         // Print opening hours and the addresses
         System.out.println("Library hours:");
@@ -122,7 +108,7 @@ public class Library {
         secondLibrary.printAddress();
         System.out.println();
 
-        // Try to borrow The Lords of the Rings from both libraries
+        // Try to borrow The Lord of the Rings from both libraries
         System.out.println("Borrowing The Lord of the Rings:");
         firstLibrary.borrowBook("The Lord of the Rings");
         firstLibrary.borrowBook("The Lord of the Rings");
@@ -137,7 +123,7 @@ public class Library {
         secondLibrary.printAvailableBooks();
         System.out.println();
 
-        // Return The Lords of the Rings to the first library
+        // Return The Lord of the Rings to the first library
         System.out.println("Returning The Lord of the Rings:");
         firstLibrary.returnBook("The Lord of the Rings");
         System.out.println();
