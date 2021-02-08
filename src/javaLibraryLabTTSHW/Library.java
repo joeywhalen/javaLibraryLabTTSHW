@@ -44,24 +44,29 @@ public class Library {
     
     private void borrowBook(String bookTitle) {
 		// TODO Auto-generated method stub
-		boolean found = false;
-		boolean success = false;
+		boolean inCatalog = false;
+		boolean claimed = false;
 		for (Book book : this.libraryMain) {
 			if (book.title.equalsIgnoreCase(bookTitle)) {
-				found = true;
+				inCatalog = true;
 				if (!book.isBorrowed()) {
 					book.borrowed();
 					System.out.println("You successfully borrowed " + bookTitle);
-					success = true;
+					claimed = true;
 					break;
 				}
 			}
 		}
-		if (!found) {
+		if (!inCatalog) {
 			System.out.println("Sorry, this book is not inj our catalog.");
-		} else if (!success) {
+		} else if (!claimed) {
 			System.out.println("Sorry, this book is already borrowed.");
 		}
+	}
+    
+    private void printAvailableBooks() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public static void main(String[] args) {
@@ -94,15 +99,15 @@ public class Library {
         secondLibrary.borrowBook("The Lord of the Rings");
         System.out.println();
 
-//        // Print the titles of all available books from both libraries
-//        System.out.println("Books available in the first library:");
-//        firstLibrary.printAvailableBooks();
-//        System.out.println();
-//        System.out.println("Books available in the second library:");
-//        secondLibrary.printAvailableBooks();
-//        System.out.println();
-//
-//        // Return The Lords of the Rings to the first library
+        // Print the titles of all available books from both libraries
+        System.out.println("Books available in the first library:");
+        firstLibrary.printAvailableBooks();
+        System.out.println();
+        System.out.println("Books available in the second library:");
+        secondLibrary.printAvailableBooks();
+        System.out.println();
+
+        // Return The Lords of the Rings to the first library
 //        System.out.println("Returning The Lord of the Rings:");
 //        firstLibrary.returnBook("The Lord of the Rings");
 //        System.out.println();
@@ -111,6 +116,8 @@ public class Library {
 //        System.out.println("Books available in the first library:");
 //        firstLibrary.printAvailableBooks();
   }
+
+	
 
 	
 
